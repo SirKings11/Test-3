@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+
+    <title>Sample Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Profile</h1>
+
+    <!-- Picture -->
+    <img src="./Assets/IMG_6735 (1)2.JPG" style="max-width: 70%; height: auto; border-radius: 50%;">
+
+    <!-- Bio -->
+    <div>
+        <h2>Kingsley Chukwunomnso Okoronkwo</h2>
+        <p>
+            My name is Kingsley C. Okoronkwo. A Digital Consultant, Branding and Social Media Optimization Strategist.
+            I have worked with many businesses as a Social Media Manager and have help to elevate thier presence massively
+            in the online space. These Business ranges from different sector such as Lingerie Brand, Digital Marketing Agencies, Religious organizations,
+            Tech Communities, Auto Mobile Brands and so on... In addition to my Digital skills, I am Graphics Designer, UI/UX Designer, Content Writer and Copywriter.
+            Check me out on Various Social media platforms at Kingsley Okoronkwo
+        </p>
+    </div>
+
+    <div>
+        <h2>My Experience at Alt School Sofware Engineering Training Program</h2>
+        <p>
+            My Expereince at Alt School Training Program as a wonderful, Inspiring and Educative one. I have been once in such a Program
+            but this particular one is full of learning new things and meeting awesome people and tuotors. From this program,
+            I have met so many people and has seen many new things used in the online space such as Git and Github. 
+            A special shoutout to all our tutors [Miss Adaeze, Mr. Ifenna], Alt School Africa, Enugu SME Center, Enugu State Government as I look forward to learn more!
+         </p>
+    </div>
+
+    <h1>Fill in the Information below</h1>
+
+    <form action="/submit_form" method="post">
+        <!-- Text Input -->
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required>
+        <br><br>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <!-- Radio Buttons -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+
+        <!-- Dropdown/Select -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="Frontend">Frontend Engineering</option>
+            <option value="Backend">Backend Engineering</option>
+            <!-- Add more options as needed -->
+        </select>
+        <br><br>
+
+        <!-- Textarea for Comments -->
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <!-- File Input -->
+            <label for="file">Select a file:</label>
+            <input type="file" id="file" name="file" accept=".pdf, .doc, .docx">
+    
+            <!-- Additional fields can be added if needed -->
+    
+            <!-- Submit Button -->
+            <button type="submit">Upload</button>
+        </form>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+    <br><br>
+
+    <h1>List of 10 Programming Languages, thier Primary Use, Year of Initial Release and Notable features</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Programming Langauges</th>
+                <th>Primary Use</th>
+                <th>Year of Initial Release</th>
+                <th>Notable Features</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>C</td>
+                <td> System programming, embedded systems, game development</td>
+                <td>1972</td>
+                <td>Low-level memory manipulation, procedural programming, efficient and fast execution</td>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td>Web development, mobile app development (Android), enterprise applications</td>
+                <td>1995</td>
+                <td>Object-oriented, platform independence (Write Once, Run Anywhere - WORA), strong community support</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Web development, data science, artificial intelligence, automation</td>
+                <td>1991</td>
+                <td>Readability, easy syntax, extensive standard library, dynamic typing</td>
+            </tr>
+            <tr>
+                <td>Java Script</td>
+                <td>Web development (client-side), server-side development (Node.js)</td>
+                <td>1995</td>
+                <td>Dynamic scripting language, runs in web browsers, asynchronous programming support</td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td> System/software development, game development</td>
+                <td>1985</td>
+                <td>Object-oriented programming, performance close to C, standard template library (STL)</td>
+            </tr>
+            <tr>
+                <td>Ruby</td>
+                <td>Web development, scripting</td>
+                <td>1995</td>
+                <td>Object-oriented, concise syntax, metaprogramming capabilities, strong community focus on developer happiness</td>
+            </tr>
+            <tr>
+                <td>Swift</td>
+                <td> iOS/macOS app development</td>
+                <td>2014</td>
+                <td>Developed by Apple, designed for safety, modern syntax, automatic memory management</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td> Server-side web development</td>
+                <td>1995</td>
+                <td> Embedded in HTML, easy integration with databases, widely used for building dynamic websites</td>
+            </tr>
+            <tr>
+                <td>Go [Golang]</td>
+                <td>System programming, web development, cloud computing</td>
+                <td>2009</td>
+                <td>Developed by Google, statically typed, simplicity, built-in support for concurrent programming</td>
+            </tr>
+            <tr>
+                <td>Rust</td>
+                <td>Systems programming, particularly where memory safety is critical</td>
+                <td>2010</td>
+                <td>Memory safety without garbage collection, zero-cost abstractions, strong type system</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+</body>
+</html>
